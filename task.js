@@ -27,10 +27,12 @@ class Triangle {
       this.side1 = side1;
       this.side2 = side2;
       this.side3 = side3;
-
-      let getPerimeter = side1 + side2 + side3;
-      let getArea = Number(Math.sqrt((getPerimeter/2)*(getPerimeter/2 - side1)*(getPerimeter/2 - side2)*(getPerimeter/2 - side3)).toFixed(2));
-       return [getPerimeter, getArea]
+  }
+  getPerimeter() {
+    return (this.side1 + this.side2 + this.side3);
+  }
+  getArea() {
+    return (Number(Math.sqrt((getPerimeter/2)*(getPerimeter/2 - this.side1)*(getPerimeter/2 - this.side2)*(getPerimeter/2 - this.side3)).toFixed(2)));
   }
 }
 
