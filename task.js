@@ -21,19 +21,19 @@ function validateCount(element) {
 
 class Triangle {
   constructor(side1, side2, side3) {
-      if ((this.side1 + this.side2) < this.side3 || (this.side1 + this.side3) < this.side2 || (this.side2 + this.side3) < this.side1) {
+    this.side1 = side1;
+    this.side2 = side2;
+    this.side3 = side3;
+      if ((side1 + side2) < side3 || (side1 + side3) < side2 || (side2 + side3) < side1) {
           throw new Error("Треугольник с такими сторонами не существует");
       }
-      this.side1 = side1;
-      this.side2 = side2;
-      this.side3 = side3;
   }
   getPerimeter() {
     return (this.side1 + this.side2 + this.side3);
   }
   getArea() {
-    let this.halfPerimeter = (this.side1 + this.side2 + this.side3)/2;
-    return (Number(Math.sqrt((this.halfPerimeter)*(this.halfPerimeter - this.side1)*(this.halfPerimeter - this.side2)*(this.halfPerimeter - this.side3)).toFixed(2)));
+    let halfPerimeter = getPerimeter()/2;
+    return (Number(Math.sqrt((halfPerimeter)*(halfPerimeter - this.side1)*(halfPerimeter - this.side2)*(halfPerimeter - this.side3)).toFixed(3)));
   }
 }
 
